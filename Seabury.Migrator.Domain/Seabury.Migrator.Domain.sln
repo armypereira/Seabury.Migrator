@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.Domain", "Seabury.Migrator.Domain\Seabury.Migrator.Domain.csproj", "{A5CD5E03-7B5F-4442-B4C8-36883C4789B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.Contract", "Seabury.Migrator.Contract\Seabury.Migrator.Contract.csproj", "{86153FAC-B60F-481E-ABE7-5AC29B1A2155}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.SqlRepository", "Seabury.Migrator.SqlRepository\Seabury.Migrator.SqlRepository.csproj", "{B649330A-4467-4C55-863C-A7629BCEE9A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.OracleRepository", "Seabury.Migrator.OracleRepository\Seabury.Migrator.OracleRepository.csproj", "{792CC358-A6D7-444D-BDB7-9FC044247F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.Test", "Seabury.Migrator.Test\Seabury.Migrator.Test.csproj", "{C5963052-BBD0-4431-8B2A-8260615296C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5CD5E03-7B5F-4442-B4C8-36883C4789B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CD5E03-7B5F-4442-B4C8-36883C4789B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CD5E03-7B5F-4442-B4C8-36883C4789B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CD5E03-7B5F-4442-B4C8-36883C4789B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86153FAC-B60F-481E-ABE7-5AC29B1A2155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86153FAC-B60F-481E-ABE7-5AC29B1A2155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86153FAC-B60F-481E-ABE7-5AC29B1A2155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86153FAC-B60F-481E-ABE7-5AC29B1A2155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B649330A-4467-4C55-863C-A7629BCEE9A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B649330A-4467-4C55-863C-A7629BCEE9A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B649330A-4467-4C55-863C-A7629BCEE9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B649330A-4467-4C55-863C-A7629BCEE9A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{792CC358-A6D7-444D-BDB7-9FC044247F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792CC358-A6D7-444D-BDB7-9FC044247F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792CC358-A6D7-444D-BDB7-9FC044247F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792CC358-A6D7-444D-BDB7-9FC044247F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5963052-BBD0-4431-8B2A-8260615296C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5963052-BBD0-4431-8B2A-8260615296C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5963052-BBD0-4431-8B2A-8260615296C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5963052-BBD0-4431-8B2A-8260615296C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

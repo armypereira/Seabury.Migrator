@@ -1,0 +1,5 @@
+C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\bin\Seabury.Migrator.SqlRepository.dll
+C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\bin\Seabury.Migrator.SqlRepository.pdb
+C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.csprojResolveAssemblyReference.cache
+C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.dll
+C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.pdb

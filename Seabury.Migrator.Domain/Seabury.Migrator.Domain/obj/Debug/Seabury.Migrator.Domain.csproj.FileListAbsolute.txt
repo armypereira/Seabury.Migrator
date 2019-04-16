@@ -1,0 +1,4 @@
+c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\bin\Seabury.Migrator.Domain.dll
+c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\bin\Seabury.Migrator.Domain.pdb
+c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Domain\obj\Debug\Seabury.Migrator.Domain.dll
+c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Domain\obj\Debug\Seabury.Migrator.Domain.pdb
