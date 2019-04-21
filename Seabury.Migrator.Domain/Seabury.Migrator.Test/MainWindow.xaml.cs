@@ -34,7 +34,7 @@ namespace Seabury.Migrator.Test
             List<string> vColunns = new List<string>();
             vColunns.Add("ID");
             vColunns.Add("Name");
-            _IDataInfoRepository.ExportToXML(vColunns, "dbo.Report", 1000, "");
+            _IDataInfoRepository.ExportToXML(vColunns, "dbo.Report", 1000, "Demo.xml");
         }
     }
 }

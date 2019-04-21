@@ -29,7 +29,9 @@ namespace Seabury.Migrator.SqlRepository
                 DataSet vDataSet = ExecuteQuery(vSql, vParametrosSQL, vConnectionStrings);
                 vStart = valSizePerPage + 1;
                 vFinish = valSizePerPage + vFinish;
-                 
+                Guid vG;
+                vG = Guid.NewGuid();
+                vDataSet.WriteXml(vG.ToString()+valDirectory);
             }
             return vResult;
         }
@@ -84,7 +86,7 @@ namespace Seabury.Migrator.SqlRepository
         int NumberOfPages(string valTableName)
         {
             //Necesito buscar contra la tabla 
-            int vResult = 5000;
+            int vResult = 42;
             return vResult;
 
         }
