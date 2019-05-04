@@ -12,5 +12,6 @@ namespace Seabury.Migrator.Contract
     {
         bool Load(DataInfo valInfo);
         bool ExportToXML(List<string> valListColumns, string valTableName, int valSizePerPage, string valDirectory);
+        bool ExportReportByListToXML(List<string> valListReports, int valSizePerPage, string valDirectory);
     }
 }

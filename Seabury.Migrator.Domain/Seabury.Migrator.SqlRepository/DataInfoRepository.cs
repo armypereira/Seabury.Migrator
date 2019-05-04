@@ -31,7 +31,7 @@ namespace Seabury.Migrator.SqlRepository
                 vFinish = valSizePerPage + vFinish;
                 Guid vG;
                 vG = Guid.NewGuid();
-                vDataSet.WriteXml(vG.ToString()+valDirectory);
+                vDataSet.WriteXml(vG.ToString() + valDirectory);
             }
             return vResult;
         }
@@ -71,12 +71,12 @@ namespace Seabury.Migrator.SqlRepository
             {
                 if (vFirstColumn)
                 {
-                   
-                    vFirstColumn = false; 
+
+                    vFirstColumn = false;
                 }
                 else
                 {
-                    vSql.AppendLine(", "+vColumns);
+                    vSql.AppendLine(", " + vColumns);
                 }
             }
             vResult = vSql.ToString();
@@ -87,6 +87,46 @@ namespace Seabury.Migrator.SqlRepository
         {
             //Necesito buscar contra la tabla 
             int vResult = 42;
+            return vResult;
+
+        }
+
+        bool IDataInfoRepository.ExportReportByListToXML(List<string> valListReports, int valSizePerPage, string valDirectory)
+        {
+            bool vResult = true;
+            SqlTool insSqlTool = new SqlTool();
+            string vSql = "";
+            string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
+            List<string> vReportSqlList = ReportSqlList(valListReports);
+            foreach (var vRecord in vReportSqlList)
+            {
+                vSql = vRecord;
+                int vNP = NumberOfPages("Por definir");
+                int vStart = 1;
+                int vFinish = valSizePerPage;
+
+                for (int i = 0; i < vNP; i++)
+                {
+                    List<SqlParameter> vParametrosSQL = new List<SqlParameter>();
+                    vParametrosSQL.Add(new SqlParameter("@Start", vStart));
+                    vParametrosSQL.Add(new SqlParameter("@Finish", vFinish));
+                    DataSet vDataSet = ExecuteQuery(vSql, vParametrosSQL, vConnectionStrings);
+                    vStart = valSizePerPage + 1;
+                    vFinish = valSizePerPage + vFinish;
+                    Guid vG;
+                    vG = Guid.NewGuid();
+                    vDataSet.WriteXml(vG.ToString() + valDirectory);
+                }
+            }
+            return vResult;
+        }
+
+        List<string> ReportSqlList(List<string> valListReports)
+        {
+            //aca buscamos N reportes, con el fin de exportar cada reporte , esto aca armaria una lista de sql para la exportacion con JOIN a las vistas base para poder filtrar por el id del sql
+            List<string> vResult = new List<string>();
+            SqlTool insSqlTool = new SqlTool();
+            vResult.Add(insSqlTool.SqlQueriesExpor(valListReports));
             return vResult;
 
         }

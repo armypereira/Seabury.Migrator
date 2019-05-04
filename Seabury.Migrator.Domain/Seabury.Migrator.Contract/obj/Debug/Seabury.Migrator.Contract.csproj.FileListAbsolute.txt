@@ -3,3 +3,8 @@ c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\
 c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Contract\obj\Debug\Seabury.Migrator.Contract.dll
 c:\users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Contract\obj\Debug\Seabury.Migrator.Contract.pdb
 C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Contract\obj\Debug\Seabury.Migrator.Contract.csprojResolveAssemblyReference.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\bin\Seabury.Migrator.Contract.dll
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\bin\Seabury.Migrator.Contract.pdb
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Contract\obj\Debug\Seabury.Migrator.Contract.csprojResolveAssemblyReference.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Contract\obj\Debug\Seabury.Migrator.Contract.dll
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Contract\obj\Debug\Seabury.Migrator.Contract.pdb

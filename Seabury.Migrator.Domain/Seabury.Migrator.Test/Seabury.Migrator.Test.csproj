@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Seabury.Migrator.AppService">
+      <HintPath>..\bin\Seabury.Migrator.AppService.dll</HintPath>
+    </Reference>
     <Reference Include="Seabury.Migrator.Contract">
       <HintPath>..\bin\Seabury.Migrator.Contract.dll</HintPath>
     </Reference>
@@ -100,7 +103,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

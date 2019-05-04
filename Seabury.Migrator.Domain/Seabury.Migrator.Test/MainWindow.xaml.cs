@@ -36,5 +36,14 @@ namespace Seabury.Migrator.Test
             vColunns.Add("Name");
             _IDataInfoRepository.ExportToXML(vColunns, "dbo.Report", 1000, "Demo.xml");
         }
+
+        private void ExporFilter_Click(object sender, RoutedEventArgs e)
+        {
+            AppService.DataInfoAppService ins = new AppService.DataInfoAppService();
+            List<string> vFilter = new List<string>();
+            vFilter.Add("53");
+            vFilter.Add("55");
+            ins.ExportReportByListToXML(vFilter, 1000, "Demo.xml");
+        }
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.OracleRepo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.Test", "Seabury.Migrator.Test\Seabury.Migrator.Test.csproj", "{C5963052-BBD0-4431-8B2A-8260615296C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seabury.Migrator.AppService", "Seabury.Migrator.AppService\Seabury.Migrator.AppService.csproj", "{3594E196-5F70-4E6F-8C26-6B315F53DD4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C5963052-BBD0-4431-8B2A-8260615296C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5963052-BBD0-4431-8B2A-8260615296C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5963052-BBD0-4431-8B2A-8260615296C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3594E196-5F70-4E6F-8C26-6B315F53DD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3594E196-5F70-4E6F-8C26-6B315F53DD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3594E196-5F70-4E6F-8C26-6B315F53DD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3594E196-5F70-4E6F-8C26-6B315F53DD4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -52,6 +52,7 @@
     <Compile Include="BaseRepository.cs" />
     <Compile Include="DataInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlTool.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

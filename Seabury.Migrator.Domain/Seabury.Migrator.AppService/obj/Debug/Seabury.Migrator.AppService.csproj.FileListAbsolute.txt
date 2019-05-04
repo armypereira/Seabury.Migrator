@@ -1,0 +1,5 @@
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\bin\Seabury.Migrator.AppService.dll
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\bin\Seabury.Migrator.AppService.pdb
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.AppService\obj\Debug\Seabury.Migrator.AppService.csprojResolveAssemblyReference.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.AppService\obj\Debug\Seabury.Migrator.AppService.dll
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.AppService\obj\Debug\Seabury.Migrator.AppService.pdb
