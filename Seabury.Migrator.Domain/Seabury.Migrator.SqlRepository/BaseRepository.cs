@@ -42,9 +42,27 @@ namespace Seabury.Migrator.SqlRepository
                 vSqlCon.Close();
 
             }
+#pragma warning disable CS0168 // The variable 'vEx' is declared but never used
             catch (Exception vEx)
+#pragma warning restore CS0168 // The variable 'vEx' is declared but never used
             {
                 throw;
+            }
+            return vResult;
+        }
+
+        public int CountRow(string valTablename, string  valConnString)
+        {
+            string vSql = "SELECT COUNT(*) FROM "+ valTablename;
+            int  vResult = 0;
+
+            using (SqlConnection vConnection = new SqlConnection(valConnString))
+            {
+                using (SqlCommand cmdCount = new SqlCommand(vSql, vConnection))
+                {
+                    vConnection.Open();
+                    vResult = (int)cmdCount.ExecuteScalar();
+                }
             }
             return vResult;
         }

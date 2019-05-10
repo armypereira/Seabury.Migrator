@@ -18,5 +18,15 @@ namespace Seabury.Migrator.AppService
             _IDataInfoRepository.ExportReportByListToXML(valListReports, valSizePerPage, valDirectory);
             return vResult;
         }
+
+
+        public bool ExportToXML(Dictionary<string, string> valTableNameAndPK, int valSizePerPage, string valDirectory)
+        {
+            bool vResult = false;
+            _IDataInfoRepository = new DataInfoRepository();
+            _IDataInfoRepository.ExportToXML(valTableNameAndPK, valSizePerPage, valDirectory);
+            return vResult;
+        }
     }
-}
+
+}    

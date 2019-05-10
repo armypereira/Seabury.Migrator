@@ -26,6 +26,7 @@ namespace Seabury.Migrator.Test
         public MainWindow()
         {
             InitializeComponent();
+           txtDirExport.Text =   System.IO.Path.GetDirectoryName( System.Reflection.Assembly.GetEntryAssembly().Location);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -44,6 +45,15 @@ namespace Seabury.Migrator.Test
             vFilter.Add("53");
             vFilter.Add("55");
             ins.ExportReportByListToXML(vFilter, 1000, "Demo.xml");
+        }
+
+        private void ExPortTable_Click(object sender, RoutedEventArgs e)
+        {
+            AppService.DataInfoAppService ins = new AppService.DataInfoAppService();
+            Dictionary<string, string> vExport = new Dictionary<string, string>();
+            vExport.Add("QueryID", "ssQueries");
+            vExport.Add("QueryColumnID", "ssQueries_Columns");
+            ins.ExportToXML(vExport, 4000, txtDirExport.Text);
         }
     }
 }

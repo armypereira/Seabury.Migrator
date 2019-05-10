@@ -18,7 +18,7 @@ namespace Seabury.Migrator.SqlRepository
             bool vResult = true;
             string vSql = SqlExportToXML(valListColumns, valTableName);
             string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
-            int vNP = NumberOfPages(valTableName);
+            int vNP = NumberOfPages(valTableName, valSizePerPage);
             int vStart = 1;
             int vFinish = valSizePerPage;
             for (int i = 0; i < vNP; i++)
@@ -36,10 +36,7 @@ namespace Seabury.Migrator.SqlRepository
             return vResult;
         }
 
-        bool IDataInfoRepository.Load(DataInfo valInfo)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         string SqlExportToXML(List<string> valListColumns, string valTableName)
         {
@@ -83,10 +80,14 @@ namespace Seabury.Migrator.SqlRepository
             return vResult;
         }
 
-        int NumberOfPages(string valTableName)
+        int NumberOfPages(string valTableName, int valSizePerPage)
         {
             //Necesito buscar contra la tabla 
-            int vResult = 42;
+            int vResult = 0;
+            string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
+            vResult = CountRow(valTableName, vConnectionStrings);
+            vResult = (int)(vResult / valSizePerPage);
+            vResult = vResult + 1;
             return vResult;
 
         }
@@ -101,7 +102,7 @@ namespace Seabury.Migrator.SqlRepository
             foreach (var vRecord in vReportSqlList)
             {
                 vSql = vRecord;
-                int vNP = NumberOfPages("Por definir");
+                int vNP = 5000;
                 int vStart = 1;
                 int vFinish = valSizePerPage;
 
@@ -131,5 +132,67 @@ namespace Seabury.Migrator.SqlRepository
 
         }
 
+        bool IDataInfoRepository.ExportToXML(Dictionary<string, string> valTableNameAndPK, int valSizePerPage, string valDirectory)
+        {
+            bool vResult = true;
+            string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
+            foreach (KeyValuePair<string, string> kvp in valTableNameAndPK.AsParallel())
+            {
+                string vSql = SqlExportToXML(kvp.Value, kvp.Key);
+                int vNP = NumberOfPages(kvp.Value, valSizePerPage);
+                int vStart = 1;
+                int vFinish = valSizePerPage;
+                for (int i = 0; i < vNP; i++)
+                {
+                    List<SqlParameter> vParametrosSQL = new List<SqlParameter>();
+                    vParametrosSQL.Add(new SqlParameter("@Start", vStart));
+                    vParametrosSQL.Add(new SqlParameter("@Finish", vFinish));
+                    DataSet vDataSet = ExecuteQuery(vSql, vParametrosSQL, vConnectionStrings);
+                    vStart = valSizePerPage + 1;
+                    vFinish = valSizePerPage + vFinish;
+                    Guid vG;
+                    vG = Guid.NewGuid();
+                    vDataSet.WriteXml(valDirectory+ "\\"+kvp.Value + vG.ToString());
+                }
+            }
+            return vResult;
+        }
+
+
+        string GetSqlExportToXMLSelect(string valPK)
+        {
+            string vResult = string.Empty;
+            vResult = "SELECT ROW_NUMBER() OVER (ORDER BY COLUMNSORDER) AS row_id ";
+            vResult = vResult.Replace("COLUMNSORDER", valPK);
+            StringBuilder vSql = new StringBuilder();
+            vSql.AppendLine(vResult);
+            vSql.AppendLine(",*");
+            vResult = vSql.ToString();
+            return vResult;
+        }
+
+        string SqlExportToXML(string valTableName, string valPK)
+        {
+            string vResult = string.Empty;
+            StringBuilder vSql = new StringBuilder();
+            vSql.AppendLine("WITH data");
+            vSql.AppendLine("AS");
+            vSql.AppendLine("(");
+            vSql.AppendLine(GetSqlExportToXMLSelect(valPK));
+            vSql.AppendLine("FROM ");
+            vSql.AppendLine(valTableName);
+            vSql.AppendLine(") ");
+            vSql.AppendLine(" SELECT * ");
+            vSql.AppendLine(" FROM data ");
+            vSql.AppendLine(" WHERE row_id BETWEEN @Start AND @Finish ");
+            vResult = vSql.ToString();
+            return vResult;
+        }
+
+
+        bool IDataInfoRepository.Load(DataInfo valInfo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
