@@ -36,7 +36,6 @@ namespace Seabury.Migrator.SqlRepository
                     vAdapter.SelectCommand.Parameters.Add(vSQLParam);
                 }
                 vSqlCon.Open();
-                
                 vResult = new DataSet();
                 vAdapter.Fill(vResult);
                 vSqlCon.Close();
@@ -66,6 +65,34 @@ namespace Seabury.Migrator.SqlRepository
             }
             return vResult;
         }
+
+        public   void PerformBulkCopyXMLDataSource(string valConnString, string valDirectory)
+        {
+            string vConnectionString = valConnString;
+            DataSet ds = new DataSet();
+            DataTable vSourceData = new DataTable();
+            ds.ReadXml(valDirectory);
+            vSourceData = ds.Tables[0];
+            vSourceData.Columns.Remove("row_id");
+            vSourceData.Columns.Remove("Sys_TimeStamp");
+
+            
+            // open the destination data
+            using (SqlConnection vDestinationConnection =
+                            new SqlConnection(vConnectionString))
+            {
+                // open the connection
+                vDestinationConnection.Open();
+                using (SqlBulkCopy vBulkCopy = new SqlBulkCopy(vDestinationConnection.ConnectionString))
+                {
+                    vBulkCopy.DestinationTableName = vSourceData.TableName+ "Temp";
+                    vBulkCopy.BatchSize = vSourceData.Rows.Count;
+                    vBulkCopy.NotifyAfter = 1000;
+                    vBulkCopy.WriteToServer(vSourceData);
+                }
+            }
+        }
+        
 
     }
 }

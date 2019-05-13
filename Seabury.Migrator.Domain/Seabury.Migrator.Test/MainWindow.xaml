@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="141,69,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
-        <Button Content="ExporFilter" Name="ExporFilter" HorizontalAlignment="Left" Margin="246,69,0,0" VerticalAlignment="Top" Width="107" Click="ExporFilter_Click" />
-        <TextBox Name="txtDirExport" HorizontalAlignment="Left" Height="23" Margin="21,33,0,0" TextWrapping="Wrap" Text="Demo.xml" VerticalAlignment="Top" Width="430"/>
-        <Button Name="ExPortTable" Content="Export Table" HorizontalAlignment="Left" Margin="365,69,0,0" VerticalAlignment="Top" Width="86" Height="20" Click="ExPortTable_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="21,69,0,0" VerticalAlignment="Top" Width="59" Click="Button_Click"/>
+        <Button Content="ExporFilter" Name="ExporFilter" HorizontalAlignment="Left" Margin="85,69,0,0" VerticalAlignment="Top" Width="76" Click="ExporFilter_Click" />
+        <TextBox Name="txtDirExport" HorizontalAlignment="Left" Height="46" Margin="21,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="486"/>
+        <Button Name="ExPortTable" Content="Export Table" HorizontalAlignment="Left" Margin="166,69,0,0" VerticalAlignment="Top" Width="88" Height="20" Click="ExPortTable_Click"/>
+        <Button  Name="ImportBT"  Content="Import SQL Bulk Copy" HorizontalAlignment="Left" Margin="259,69,0,0" VerticalAlignment="Top" Width="135" Click="ImportBT_Click"/>
     </Grid>
 </Window>

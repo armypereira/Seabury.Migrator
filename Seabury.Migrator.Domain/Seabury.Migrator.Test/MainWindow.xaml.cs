@@ -53,7 +53,13 @@ namespace Seabury.Migrator.Test
             Dictionary<string, string> vExport = new Dictionary<string, string>();
             vExport.Add("QueryID", "ssQueries");
             vExport.Add("QueryColumnID", "ssQueries_Columns");
-            ins.ExportToXML(vExport, 4000, txtDirExport.Text);
+            ins.ExportToXML(vExport, 2000, txtDirExport.Text);
+        }
+
+        private void ImportBT_Click(object sender, RoutedEventArgs e)
+        {
+            AppService.DataInfoAppService ins = new AppService.DataInfoAppService();
+            ins.Import(txtDirExport.Text);
         }
     }
 }

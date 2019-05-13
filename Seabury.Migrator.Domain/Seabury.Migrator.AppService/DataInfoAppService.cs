@@ -27,6 +27,14 @@ namespace Seabury.Migrator.AppService
             _IDataInfoRepository.ExportToXML(valTableNameAndPK, valSizePerPage, valDirectory);
             return vResult;
         }
+
+        public bool Import(string valDirectory)
+        {
+            bool vResult = false;
+            _IDataInfoRepository = new DataInfoRepository();
+            _IDataInfoRepository.ImportData( valDirectory);
+            return vResult;
+        }
     }
 
 }    

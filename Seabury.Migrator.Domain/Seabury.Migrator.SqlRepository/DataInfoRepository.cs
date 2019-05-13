@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace Seabury.Migrator.SqlRepository
             return vResult;
         }
 
-        
+
 
         string SqlExportToXML(List<string> valListColumns, string valTableName)
         {
@@ -148,11 +149,12 @@ namespace Seabury.Migrator.SqlRepository
                     vParametrosSQL.Add(new SqlParameter("@Start", vStart));
                     vParametrosSQL.Add(new SqlParameter("@Finish", vFinish));
                     DataSet vDataSet = ExecuteQuery(vSql, vParametrosSQL, vConnectionStrings);
-                    vStart = valSizePerPage + 1;
+                    vDataSet.Tables[0].TableName = kvp.Value;
+                    vStart = vFinish + 1;
                     vFinish = valSizePerPage + vFinish;
                     Guid vG;
                     vG = Guid.NewGuid();
-                    vDataSet.WriteXml(valDirectory+ "\\"+kvp.Value + vG.ToString());
+                    vDataSet.WriteXml(valDirectory + "\\" + kvp.Value + vG.ToString()+".xml");
                 }
             }
             return vResult;
@@ -193,6 +195,27 @@ namespace Seabury.Migrator.SqlRepository
         bool IDataInfoRepository.Load(DataInfo valInfo)
         {
             throw new NotImplementedException();
+        }
+
+        bool IDataInfoRepository.ImportData(string valDirectory)
+        {
+            bool vResult = true;
+            List<string> vListFile =  GetFileDDirectory(valDirectory);
+            string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
+            foreach ( var vFile in vListFile)
+            {
+                if (vFile.Contains(".xml"))
+                {
+                    PerformBulkCopyXMLDataSource(vConnectionStrings, vFile);
+                }
+            }
+            return vResult;
+        }
+        public List<string> GetFileDDirectory(string valDirectory)
+        {
+            List<string> vResult = new List<string>();
+            vResult = Directory.GetFiles(valDirectory).ToList();
+            return vResult;
         }
     }
 }
