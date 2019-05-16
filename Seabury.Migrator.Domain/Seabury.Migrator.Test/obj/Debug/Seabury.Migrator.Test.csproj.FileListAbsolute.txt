@@ -18,7 +18,6 @@ C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\
 C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.pdb
 C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Test\bin\Debug\Seabury.Migrator.SqlRepository.dll
 C:\Users\jpereira\documents\visual studio 2017\Projects\Seabury.Migrator.Domain\Seabury.Migrator.Test\bin\Debug\Seabury.Migrator.SqlRepository.pdb
-C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.csprojResolveAssemblyReference.cache
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\MainWindow.g.cs
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\App.g.cs
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test_MarkupCompile.cache
@@ -40,3 +39,6 @@ C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Mi
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.g.resources
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.Properties.Resources.resources
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.csproj.GenerateResource.Cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.csprojAssemblyReference.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.csproj.CoreCompileInputs.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Test\obj\Debug\Seabury.Migrator.Test.csproj.CopyComplete

@@ -7,4 +7,5 @@ C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Mi
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\bin\Seabury.Migrator.SqlRepository.pdb
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.dll
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.pdb
-C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.csprojResolveAssemblyReference.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.csproj.CoreCompileInputs.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.SqlRepository\obj\Debug\Seabury.Migrator.SqlRepository.csproj.CopyComplete

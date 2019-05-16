@@ -6,3 +6,5 @@ C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Mi
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\bin\Seabury.Migrator.Domain.pdb
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Domain\obj\Debug\Seabury.Migrator.Domain.dll
 C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Domain\obj\Debug\Seabury.Migrator.Domain.pdb
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Domain\obj\Debug\Seabury.Migrator.Domain.csprojAssemblyReference.cache
+C:\Users\jpereira\Documents\Visual Studio 2017\Projects\DataPerforman\Seabury.Migrator\Seabury.Migrator.Domain\Seabury.Migrator.Domain\obj\Debug\Seabury.Migrator.Domain.csproj.CoreCompileInputs.cache

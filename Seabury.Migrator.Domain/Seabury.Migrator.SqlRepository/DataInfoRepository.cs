@@ -137,7 +137,8 @@ namespace Seabury.Migrator.SqlRepository
         {
             bool vResult = true;
             string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
-            foreach (KeyValuePair<string, string> kvp in valTableNameAndPK.AsParallel())
+
+            Parallel.ForEach(valTableNameAndPK, (kvp) =>
             {
                 string vSql = SqlExportToXML(kvp.Value, kvp.Key);
                 int vNP = NumberOfPages(kvp.Value, valSizePerPage);
@@ -154,9 +155,31 @@ namespace Seabury.Migrator.SqlRepository
                     vFinish = valSizePerPage + vFinish;
                     Guid vG;
                     vG = Guid.NewGuid();
-                    vDataSet.WriteXml(valDirectory + "\\" + kvp.Value + vG.ToString()+".xml");
+                    vDataSet.WriteXml(valDirectory + "\\" + kvp.Value + vG.ToString() + ".xml");
                 }
-            }
+
+            });
+
+            //foreach (KeyValuePair<string, string> kvp in valTableNameAndPK.AsParallel())
+            //{
+            //    string vSql = SqlExportToXML(kvp.Value, kvp.Key);
+            //    int vNP = NumberOfPages(kvp.Value, valSizePerPage);
+            //    int vStart = 1;
+            //    int vFinish = valSizePerPage;
+            //    for (int i = 0; i < vNP; i++)
+            //    {
+            //        List<SqlParameter> vParametrosSQL = new List<SqlParameter>();
+            //        vParametrosSQL.Add(new SqlParameter("@Start", vStart));
+            //        vParametrosSQL.Add(new SqlParameter("@Finish", vFinish));
+            //        DataSet vDataSet = ExecuteQuery(vSql, vParametrosSQL, vConnectionStrings);
+            //        vDataSet.Tables[0].TableName = kvp.Value;
+            //        vStart = vFinish + 1;
+            //        vFinish = valSizePerPage + vFinish;
+            //        Guid vG;
+            //        vG = Guid.NewGuid();
+            //        vDataSet.WriteXml(valDirectory + "\\" + kvp.Value + vG.ToString() + ".xml");
+            //    }
+            //}
             return vResult;
         }
 
@@ -202,17 +225,20 @@ namespace Seabury.Migrator.SqlRepository
             bool vResult = true;
             List<string> vListFile =  GetFileDDirectory(valDirectory);
             string vConnectionStrings = ConfigurationManager.ConnectionStrings["DBSqlConnection"].ToString();
-            foreach ( var vFile in vListFile)
+            Parallel.ForEach(vListFile, (vFile) =>
             {
+
                 if (vFile.Contains(".xml"))
                 {
                     PerformBulkCopyXMLDataSource(vConnectionStrings, vFile);
                 }
-            }
+           
+            });
             return vResult;
         }
         public List<string> GetFileDDirectory(string valDirectory)
         {
+
             List<string> vResult = new List<string>();
             vResult = Directory.GetFiles(valDirectory).ToList();
             return vResult;
